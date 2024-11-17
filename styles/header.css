@@ -1,0 +1,7 @@
+header {
+  background-color: var(--surface-color);
+
+  & a:first-child {
+    margin-right: auto;
+  }
+}

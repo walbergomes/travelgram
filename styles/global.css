@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --brand-color: #ef5f4c;
+
+  --bg-color: #ffffff;
+  --surface-color: #f5f5f5;
+  --skeleton-color: #d9d9d9;
+  --shape-transparency: rgba(255, 255, 255, 0.56);
+
+  --text-color-primary: #313131;
+  --text-color-secondary: #6c6c6c;
+
+  --ff-sans: "Poppins", system-ui, sans-serif;
+  --fw-base: 400;
+  --fw-bold: 700;
+
+  --fs-sm: 0.75rem;
+  --fs-md: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.5rem;
+
+  --px-base: 1rem;
+
+  --py-base: 1rem;
+  --py-lg: 2rem;
+}
+
+html {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-base);
+  font-size: var(--fs-md);
+  line-height: 1.7;
+  color: var(--text-color-primary);
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+h1 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+}
+
+p,
+span {
+  font-size: var(--fs-md);
+  color: var(--text-color-secondary);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-secondary);
+}
+
+a:hover {
+  color: var(--brand-color);
+}
+
+a.explorer {
+  --bg-img: "";
+  background-image: var(--bg-img);
+
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  &[aria-label="explorer"] {
+    --bg-img: url(../assets/icons/MagnifyingGlass.svg);
+
+    &:hover {
+      --bg-img: url(../assets/icons/MagnifyingGlass-hover.svg);
+    }
+  }
+}
+
+ul[role="list"] {
+  list-style: none;
+}
+
+img.avatar-profile {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+img.person-pic {
+  width: 7.5rem;
+  height: 7.5rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (width >= 80em) {
+  :root {
+    --fs-lg: 2rem;
+
+    --px-base: 2rem;
+
+    --py-base: 1.25rem;
+  }
+}
